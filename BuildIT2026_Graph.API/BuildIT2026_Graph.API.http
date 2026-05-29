@@ -1,0 +1,6 @@
+@BuildIT2026_Graph.API_HostAddress = http://localhost:5007
+
+GET {{BuildIT2026_Graph.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
