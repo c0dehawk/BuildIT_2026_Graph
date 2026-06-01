@@ -21,7 +21,7 @@ namespace BuildIT2026_Graph.API.Controllers
         {
             try
             {
-                var result = await _neo4jService.QueryAsync("MATCH (n) RETURN n LIMIT 25", new Dictionary<string, object?>());
+                var result = await _neo4jService.QueryAsync("MATCH (n) RETURN n LIMIT 50", new Dictionary<string, object?>());
                 return Ok(result);
             }
             catch (Exception ex)
