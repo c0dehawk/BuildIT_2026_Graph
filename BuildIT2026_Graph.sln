@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildIT2026_Graph.API", "Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildIT2026_Graph.Core", "BuildIT2026_Graph.Core\BuildIT2026_Graph.Core.csproj", "{1693BE7B-C192-4C6A-AF16-677A6685060B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildIT_2026.Graph.Console", "BuildIT_2026.Graph.Console\BuildIT_2026.Graph.Console.csproj", "{F7F9166F-1C74-4651-B862-0669F25EB4ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1693BE7B-C192-4C6A-AF16-677A6685060B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1693BE7B-C192-4C6A-AF16-677A6685060B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1693BE7B-C192-4C6A-AF16-677A6685060B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F9166F-1C74-4651-B862-0669F25EB4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F9166F-1C74-4651-B862-0669F25EB4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F9166F-1C74-4651-B862-0669F25EB4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F9166F-1C74-4651-B862-0669F25EB4ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
