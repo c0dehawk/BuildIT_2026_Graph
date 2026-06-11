@@ -38,9 +38,9 @@ while (true)
         var numberOfRecords = int.TryParse(input, out int n) ? n : 10;
 
         MBObject obj = new MBObject();
-        obj.AddProperty(new MBStringProperty("Id").SetFormat(MBStringFormat.Guid));
-        obj.AddProperty(new MBStringProperty("FirstName").SetFormat(MBStringFormat.FirstName));
-        obj.AddProperty(new MBStringProperty("LastName").SetFormat(MBStringFormat.LastName));
+        obj.AddProperty(new MBNumberProperty("customerId"));
+        obj.AddProperty(new MBStringProperty("FirstName").SetFormat(MBStringFormat.FirstName).SetIncludeSpecialCharacters(false));
+        obj.AddProperty(new MBStringProperty("LastName").SetFormat(MBStringFormat.LastName).SetIncludeSpecialCharacters(false));
         obj.AddProperty(new MBDateTimeProperty("DateOfBirth"));
         obj.AddProperty(new MBStringProperty("Email").SetFormat(MBStringFormat.Email));
 
@@ -48,9 +48,9 @@ while (true)
 
 
         //// Cast to Person
-        //List<Object> people = JsonConvert.DeserializeObject<List<Object>>(JsonConvert.SerializeObject(sampleRecords)) ?? new List<Object>();
+        List<Object> people = JsonConvert.DeserializeObject<List<Object>>(JsonConvert.SerializeObject(sampleRecords)) ?? new List<Object>();
 
-        //Console.Write(JsonConvert.SerializeObject(people, Newtonsoft.Json.Formatting.Indented));
+        Console.Write(JsonConvert.SerializeObject(people, Newtonsoft.Json.Formatting.Indented));
 
     } 
 

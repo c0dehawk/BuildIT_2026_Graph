@@ -46,6 +46,31 @@ namespace BuildIT2026_Graph.Core.Services
             return ConvertNeo4jValue(result);
         }
 
+        public async Task<List<Dictionary<string, object?>>> UpdateNodeAsync(string cypher, Dictionary<string, object?> parameters)
+        {
+            var normalizedParams = NormalizeDictionary(parameters);
+
+            await using var session = _driver.AsyncSession();
+
+            return await session.ExecuteWriteAsync(async tx =>
+            {
+                var cursor = await tx.RunAsync(cypher, normalizedParams);
+                var records = await cursor.ToListAsync();
+
+                return records.Select(record =>
+                {
+                    var dict = new Dictionary<string, object?>();
+
+                    foreach (var key in record.Keys)
+                    {
+                        dict[key] = ConvertNeo4jValue(record[key]);
+                    }
+
+                    return dict;
+                }).ToList();
+            });
+        }
+
         public async Task<object?> CreateRelationshipAsync(
             string fromLabel,
             string fromKey,

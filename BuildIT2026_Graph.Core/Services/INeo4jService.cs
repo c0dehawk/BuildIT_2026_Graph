@@ -19,6 +19,8 @@ namespace BuildIT2026_Graph.Core.Services
             string relationshipType,
             Dictionary<string, object?> relationshipProperties);
 
+        Task<List<Dictionary<string, object?>>> UpdateNodeAsync(string cypher, Dictionary<string, object?> parameters);
+
         Task<List<Dictionary<string, object?>>> QueryAsync(string cypher, Dictionary<string, object?> parameters);
         Task<List<object?>> FindNodesAsync(string label, string propertyName, object? propertyValue);
     }
